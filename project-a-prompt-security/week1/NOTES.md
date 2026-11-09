@@ -4,6 +4,15 @@ Toy app: `week1/app` (FastAPI). Run with stub (no key) or live Groq/OpenAI-compa
 
 **How to probe**
 
+Start the app (`uvicorn main:app --port 8000` from `week1/app`), then either:
+
+```bash
+# preferred — posts all five payloads below
+python run_probes.py
+```
+
+or one-off:
+
 ```bash
 curl -s http://127.0.0.1:8000/chat \
   -H 'Content-Type: application/json' \
@@ -11,6 +20,8 @@ curl -s http://127.0.0.1:8000/chat \
 ```
 
 Mark **Result** after you run each case. If `mode` is `stub`, mark **pending live LLM**.
+
+**Live run status (2026-11-09):** No `LLM_API_KEY` / `GROQ_API_KEY` in this agent environment — probes below stay **pending live LLM**. Set the key in `week1/app/.env` (or Cursor cloud secrets) and re-run.
 
 | # | Category | Payload (idea) | Expected insecure behavior | Result | Evidence |
 |---|----------|----------------|----------------------------|--------|----------|
