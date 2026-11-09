@@ -1,0 +1,2 @@
+id,title,severity,likelihood,impact,risk_level,asset,status,owner,recommendation,residual_risk
+F-001,Example: system prompt leakage,High,High,High,Critical,system prompt / model,Open,App Sec,Harden prompt; never put secrets in prompt; add output filter,Model may still paraphrase policy text
